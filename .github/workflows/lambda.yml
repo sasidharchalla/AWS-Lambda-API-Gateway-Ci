@@ -55,8 +55,10 @@ jobs:
        cd ../..
        
    -  name: Build terraform  variables
-      run:
-       echo region = ${{ env.AWS_REGION }} > sensitive.tfvars
+      run: |
+       
+       pwd
+       echo region = ${{ env.AWS_REGION }} > Project/Infrastructure/sensitive.tfvars
        
    -  name: terraform init
       run: |
