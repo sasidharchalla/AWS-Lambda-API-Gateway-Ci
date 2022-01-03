@@ -62,8 +62,10 @@ jobs:
        
    -  name: terraform init
       run: |
-     
-       #cd Project/Infrastructure
+      
+       cd Project/Infrastructure
+       ls
+       cat sensitive.tfvars
        #terraform init
 
    -  name: terraform apply
