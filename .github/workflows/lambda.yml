@@ -19,12 +19,12 @@ jobs:
   steps:
    - name: check the code
      uses: actions/Checkout@v2
-   - name: Configure AWS credentials
-     uses: aws-actions/configure-aws-credentials@v1
-     with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ env.AWS_REGION }}
+   #- name: Configure AWS credentials
+     #uses: aws-actions/configure-aws-credentials@v1
+     #with:
+        #aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        #aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        #aws-region: ${{ env.AWS_REGION }}
 
    - name: test
      run: echo "tested"
@@ -61,10 +61,10 @@ jobs:
    -  name: terraform init
       run: |
      
-       cd Project/Infrastructure
-       terraform init
+       #cd Project/Infrastructure
+       #terraform init
 
    -  name: terraform apply
       run: |
-       cd Project/Infrastructure
-       terraform apply -auto-approve
+       #cd Project/Infrastructure
+       #terraform apply -auto-approve
