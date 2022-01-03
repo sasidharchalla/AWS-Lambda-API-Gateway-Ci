@@ -58,7 +58,7 @@ jobs:
       run: |
        
        pwd
-       echo region = ${{ env.AWS_REGION }} > Project/Infrastructure/sensitive.tfvars
+       echo region = "${{ env.AWS_REGION }}" > Project/Infrastructure/sensitive.tfvars
        
    -  name: terraform init
       run: |
